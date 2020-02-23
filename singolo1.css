@@ -52,7 +52,7 @@ body {
 .header::after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: 0;
 
   width: 100%;
   height: 6px;
@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 34px 40px 35px;
+  padding: 34px 40px 41px;
 }
 
 .logo {
@@ -115,4 +115,68 @@ body {
 
 .navigation__link a:hover {
   color: gray;
+}
+
+/* slider ***************************************************/
+
+.slider {
+  position: relative;
+
+  height: 600px;
+
+  background: #f06c64;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background-color: #ea676b;
+}
+
+.slider__wrapper,
+.slider__content {
+  position: relative;
+}
+
+.slider__button {
+  position: absolute;
+  top: 280px;
+
+  width: 16px;
+  height: 27px;
+
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.slider__button_left {
+  left: 40px;
+
+  background: url(./assets/images/button-left.png);
+}
+
+.slider__button_right {
+  right: 40px;
+
+  background: url(./assets/images/button-right.png);
+}
+
+.phone {
+  position: absolute;
+}
+
+.phone__vertical {
+  top: 53px;
+  left: 110px;
+}
+
+.phone__horizontal {
+  top: 173px;
+  left: 424px;
 }
