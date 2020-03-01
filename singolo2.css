@@ -199,8 +199,11 @@ h3 {
 
 .employee__title {
   margin-bottom: 10px;
+  overflow: hidden;
 
   color: #666d89;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .employee__description {
