@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -59,7 +60,7 @@ h3 {
 }
 
 .portfolio__wrapper {
-  padding: 67px 41px 64px;
+  padding: 67px 40px 64px;
 }
 
 .portfolio__title {
@@ -75,6 +76,7 @@ h3 {
   font-size: 18px;
   line-height: 18px;
   text-align: left;
+  text-align: justify;
   color: #767e9e;
 }
 
@@ -87,8 +89,9 @@ h3 {
 }
 
 .tag {
-  margin-right: 8px;
-  padding: 4px 7px;
+  min-width: 30px;
+  margin-right: 10px;
+  padding: 4px 6px;
 
   font-weight: 400;
   line-height: 1.2rem;
@@ -139,3 +142,118 @@ h3 {
 .portfolio__image img:hover {
   transform: scale(1.2);
 }
+
+/* about-us ***************************************************/
+
+.about-us {
+  position: relative;
+
+  background-color: #f2f2f2;
+}
+
+.about-us::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background-color: #ffffff;
+}
+
+.about-us__wrapper {
+  padding: 66px 40px 71px;
+}
+
+.about-us__title {
+  margin-bottom: 27px;
+
+  color: #666d89;
+}
+
+.about-us__description {
+  margin-bottom: 45px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  text-align: justify;
+  color: #767e9e;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.employee {
+  width: 300px;
+}
+
+.employee__content {
+  margin-top: 15px;
+}
+
+.employee__title {
+  margin-bottom: 10px;
+
+  color: #666d89;
+}
+
+.employee__description {
+  margin-bottom: 24px;
+
+  line-height: 20px;
+  text-align: justify;
+  color: #767e9e;
+}
+
+.employee__contacts {
+  display: flex;
+}
+
+.employee__social {
+  margin-right: 8px;
+}
+
+.social-ico {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.social-ico_facebook {
+  background-image: url("./assets/images/facebook.png");
+}
+
+.social-ico_facebook:hover {
+  background-image: url("./assets/images/facebook-colored.png");
+}
+
+.social-ico_google {
+  background-image: url("./assets/images/google-plus.png");
+}
+
+.social-ico_google:hover {
+  background-image: url("./assets/images/google-plus-colored.png");
+}
+
+.social-ico_twitter {
+  background-image: url("./assets/images/twitter.png");
+}
+
+.social-ico_twitter:hover {
+  background-image: url("./assets/images/twitter-colored.png");
+}
+
+.social-ico_linkedin {
+  background-image: url("./assets/images/linkedin.png");
+}
+
+.social-ico_linkedin:hover {
+  background-image: url("./assets/images/linkedin-colored.png");
+}
+
