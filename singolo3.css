@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 20px;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  max-width: 1020px;
+  margin: auto;
+}
+
+/* get-a-quote ***************************************************/
+
+.get-a-quote {
+  position: relative;
+
+  color: #f0d8d9;
+
+  background-color: #f06c64;
+}
+
+.get-a-quote::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background-color: #ea676b;
+}
+
+.get-a-quote__wrapper {
+  padding: 67px 40px 18px;
+}
+
+.get-a-quote__title {
+  margin-bottom: 26px;
+}
+
+.get-a-quote__description {
+  margin-bottom: 44px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.get-a-quote__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.get-a-quote__form {
+  box-sizing: border-box;
+  width: 619px;
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.fieldset__input {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 16px;
+  padding: 7px 15px 9px;
+
+  line-height: 22px;
+  color: #f0d8d9;
+
+  background-color: #d6564f;
+  border: 1px solid #d6564f;
+  border-radius: 5px;
+  outline: none;
+
+  transition: all 0.5s;
+}
+
+.fieldset__input::placeholder {
+  color: #f48c8f;
+
+  background-color: #d6564f;
+}
+
+.fieldset__input:focus {
+  background-color: #d6564f;
+  border: 1px solid #666d89;
+}
+
+.fieldset__input:invalid {
+  background-color: #d6564f;
+  border: 1px solid red;
+}
+
+@keyframes autofill {
+  to {
+    color: inherit;
+
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+
+  animation-fill-mode: both;
+}
+
+textarea.fieldset__input {
+  height: 202px;
+
+  resize: none;
+}
+
+.fieldset__button {
+  margin-left: calc(100% - 91px);
+  padding: 12px 30px;
+
+  color: #f0d8d9;
+  text-transform: uppercase;
+
+  background: #666d89;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fieldset__button:hover {
+  background: #a7a1a1;
+}
+
+.get-a-quote__sidebar {
+  width: 300px;
+}
+
+.sidebar-contact__title {
+  margin-bottom: 8px;
+}
+
+.sidebar-contact__description {
+  margin-bottom: 20px;
+
+  line-height: 22px;
+  text-align: justify;
+}
+
+.sidebar-contact__item {
+  position: relative;
+
+  padding-left: 23px;
+
+  line-height: 22px;
+}
+
+.sidebar-contact__item a {
+  color: #f0d8d9;
+  text-decoration: none;
+}
+
+.sidebar-contact__item a:hover {
+  color: #f48c8f;;
+}
+
+.sidebar-contact__icon {
+  position: absolute;
+  top: 3px;
+  left: -1px;
+
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-location {
+  background-image: url(./assets/images/icon-location.png);
+}
+
+.icon-phone {
+  background-image: url(./assets/images/icon-phone.png);
+}
+
+.icon-mail {
+  background-image: url(./assets/images/icon-mail.png);
+}
+
+/* footer ***************************************************/
+
+.footer {
+  background-color: #2d303a;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 40px;
+}
+
+.copyright-container {
+  padding: 9px 1px;
+
+  color: #575d74;
+}
+
+.employee__contacts {
+  display: flex;
+}
+
+.employee__social:not(:last-child) {
+  margin-right: 8px;
+}
+
+.social-ico {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.social-ico_facebook {
+  background-image: url("./assets/images/facebook.png");
+}
+
+.social-ico_facebook:hover {
+  background-image: url("./assets/images/facebook-colored.png");
+}
+
+.social-ico_google {
+  background-image: url("./assets/images/google-plus.png");
+}
+
+.social-ico_google:hover {
+  background-image: url("./assets/images/google-plus-colored.png");
+}
+
+.social-ico_twitter {
+  background-image: url("./assets/images/twitter.png");
+}
+
+.social-ico_twitter:hover {
+  background-image: url("./assets/images/twitter-colored.png");
+}
+
+.social-ico_linkedin {
+  background-image: url("./assets/images/linkedin.png");
+}
+
+.social-ico_linkedin:hover {
+  background-image: url("./assets/images/linkedin-colored.png");
+}
