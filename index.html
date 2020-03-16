@@ -15,7 +15,7 @@
         <h1 class="logo">Singolo</h1>
       </a>
       <nav class="header__navigation">
-          <ul class="navigation">
+          <ul class="navigation" id="menu">
               <li class="navigation__link navigation__link_active"><a href="#slider">HOME</a></li>
               <li class="navigation__link"><a href="#our-services">SERVICES</a></li>
               <li class="navigation__link"><a href="#portfolio">PORTFOLIO</a></li>
@@ -272,13 +272,13 @@
           tortor mauris condimentum nibh.
         </p>
         <div class="get-a-quote__content">
-          <form class="get-a-quote__form" action method="POST">
+          <form class="get-a-quote__form" id="form" action method="POST">
             <fieldset class="fieldset">
-              <input class="fieldset__input" type="text" name="name" placeholder="Name (Required)" required>
-              <input class="fieldset__input" type="email" name="email" placeholder="Email (Required)" required>
-              <input class="fieldset__input" type="text" name="subject" placeholder="Subject">
-              <textarea class="fieldset__input" name="message" placeholder="Describe your project in detail..."></textarea>
-              <button class="fieldset__button" type="submit">send</button>
+              <input class="fieldset__input" type="text" name="name" id="name" placeholder="Name (Required)" required>
+              <input class="fieldset__input" type="email" name="email" id="email" placeholder="Email (Required)" required>
+              <input class="fieldset__input" type="text" name="subject" id="subject" placeholder="Subject">
+              <textarea class="fieldset__input" name="message" id="message" placeholder="Describe your project in detail..."></textarea>
+              <button class="fieldset__button" type="submit" id="submit">send</button>
             </fieldset>
           </form>
           <div class="get-a-quote__sidebar sidebar-contact">
@@ -337,5 +337,6 @@
       </ul>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
