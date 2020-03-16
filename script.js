@@ -205,7 +205,6 @@ function mixImages() {
   imagesContainer.append(fragment);
 }
 
-
 // portfolio images
 const PORTFOLIO_CONTAINER = document.querySelector('.portfolio__projects');
 
@@ -222,28 +221,41 @@ PORTFOLIO_CONTAINER.addEventListener('click', event => {
   }
 });
 
+// form
+const FORM = document.getElementById('form');
+const SUBMIT = document.getElementById('submit');
+const MODAL = document.getElementById('modal');
+const MODAL_TEXT = MODAL.querySelector('.modal__text');
+const MODAL_BUTTON = MODAL.querySelector('.modal__btn');
 
+SUBMIT.addEventListener('click', event => {
+  const NAME_INPUT = document.getElementById('name');
+  const EMAIL_INPUT = document.getElementById('email');
 
+  if (NAME_INPUT.checkValidity() && EMAIL_INPUT.checkValidity()) {
+    event.preventDefault();
 
-// const FORM = document.getElementById('form');
-// const SUBMIT = document.getElementById('submit');
-// const CLOSE_BUTTON = document.getElementById('close-button');
+    showModal();
+  }
+});
 
-// SUBMIT.addEventListener('click', event => {
-//   event.preventDefault();
-//   const name = document.getElementById('name').value.toString();
-//   const name = document.getElementById('name').value.toString();
+function showModal() {
+  const SUBJECT = document.getElementById('subject').value.toString();
+  const MESSAGE = document.getElementById('message').value.toString();
 
+  let text = '<p>Письмо отправлено</p>';
+  text += `<p>${SUBJECT ? 'Тема: ' + SUBJECT : 'Без темы'}</p>`;
+  text += `<p>${MESSAGE ? 'Описание: ' + MESSAGE : 'Без описания'}</p>`;
 
-// });
+  MODAL_TEXT.innerHTML = text;
+  MODAL.classList.add('modal__overlay_show');
+}
 
-// CLOSE_BUTTON.addEventListener('click', event => {
-//   if (event.target.closest('li')) {
-//     MENU.querySelectorAll('li').forEach(el => el.classList.remove('navigation__link_active'));
-//     event.target.closest('li').classList.add('navigation__link_active');
-//   }
-// });
+MODAL.addEventListener('click', closeModal);
 
-
-
-
+function closeModal(event) {
+  if (event.target === MODAL_BUTTON || event.target === MODAL) {
+    MODAL.classList.remove('modal__overlay_show');
+    MODAL_TEXT.innerHTML = '';
+  }
+}

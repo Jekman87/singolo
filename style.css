@@ -657,8 +657,7 @@ textarea.fieldset__input {
   resize: none;
 }
 
-.fieldset__button {
-  margin-left: calc(100% - 97px);
+.button-submit {
   padding: 12px 30px;
 
   color: #f0d8d9;
@@ -672,7 +671,7 @@ textarea.fieldset__input {
   transition: all 0.3s;
 }
 
-.fieldset__button:hover {
+.button-submit:hover {
   background: #a7a1a1;
 }
 
@@ -731,6 +730,52 @@ textarea.fieldset__input {
 
 .icon-mail {
   background-image: url(./assets/images/icon-mail.png);
+}
+
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(80, 80, 80, 0.6);
+}
+
+.modal__overlay_show {
+  display: flex;
+}
+
+.modal__content {
+  position: relative;
+
+  max-width: 500px;
+  min-height: 120px;
+  max-height: 90%;
+  padding: 20px;
+  overflow: auto;
+
+  background-color: #f06c64;
+  border-radius: 5px;
+}
+
+.modal__text {
+  font-size: 1.6rem;
+  color: #f0d8d9;
+}
+
+.modal__text > * {
+  margin-bottom: 10px;
+}
+
+.modal__btn {
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* footer ***************************************************/

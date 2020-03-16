@@ -288,8 +288,8 @@
               <input class="fieldset__input" type="text" name="name" id="name" placeholder="Name (Required)" required>
               <input class="fieldset__input" type="email" name="email" id="email" placeholder="Email (Required)" required>
               <input class="fieldset__input" type="text" name="subject" id="subject" placeholder="Subject">
-              <textarea class="fieldset__input" name="message" id="message" placeholder="Describe your project in detail..."></textarea>
-              <button class="fieldset__button" type="submit" id="submit">send</button>
+              <textarea class="fieldset__input" name="message" id="message" maxlength="733" placeholder="Describe your project in detail..."></textarea>
+              <button class="fieldset__button button-submit" type="submit" id="submit">send</button>
             </fieldset>
           </form>
           <div class="get-a-quote__sidebar sidebar-contact">
@@ -348,6 +348,12 @@
       </ul>
     </div>
   </footer>
+  <div class="modal__overlay" id="modal">
+    <div class="modal__content">
+      <div class="modal__text"></div>
+      <button class="modal__btn button-submit">OK</button>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
