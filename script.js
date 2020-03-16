@@ -167,11 +167,11 @@ let el = document.querySelector('.slider__wrapper');
 swipedetect(el);
 
 // togge phone screen
-let phoneBtns = document.querySelectorAll('.phone-button');
+let PHONE_BTNS = document.querySelectorAll('.phone-button');
 
-phoneBtns.forEach(btn => btn.addEventListener('click', toggleScreen));
+PHONE_BTNS.forEach(btn => btn.addEventListener('click', toggleScreen));
 
-phoneBtns.forEach(btn => btn.addEventListener('touchstart', toggleScreen));
+PHONE_BTNS.forEach(btn => btn.addEventListener('touchstart', toggleScreen));
 
 function toggleScreen(event) {
 	let parent = event.target.parentNode;
@@ -180,10 +180,47 @@ function toggleScreen(event) {
   darkScreen.classList.toggle('dark-screen_show');
 }
 
+// portfolio tags
+const PORTFOLIO_TAGS = document.querySelector('.portfolio__tags');
+
+PORTFOLIO_TAGS.addEventListener('click', event => {
+  if (event.target.tagName === 'LI' && !event.target.classList.contains('tag_selected')) {
+    PORTFOLIO_TAGS.querySelectorAll('li').forEach(el => el.classList.remove('tag_selected'));
+    event.target.classList.add('tag_selected');
+
+    mixImages();
+  }
+});
+
+function mixImages() {
+  let images = [...document.querySelectorAll('.portfolio__image')];
+  let imagesContainer = document.querySelector('.portfolio__projects');
+  let fragment = document.createDocumentFragment();
+
+  while (images.length) {
+    let img = images.splice(Math.floor(Math.random() * images.length), 1)[0];
+    fragment.append(img);
+  }
+
+  imagesContainer.append(fragment);
+}
 
 
+// portfolio images
+const PORTFOLIO_CONTAINER = document.querySelector('.portfolio__projects');
 
+PORTFOLIO_CONTAINER.addEventListener('click', event => {
+  if (event.target.tagName === 'IMG') {
+    let li = event.target.closest('li')
 
+    if (li.classList.contains('portfolio__image_bordered')) {
+      li.classList.remove('portfolio__image_bordered');
+    } else {
+      PORTFOLIO_CONTAINER.querySelectorAll('li').forEach(el => el.classList.remove('portfolio__image_bordered'));
+      li.classList.add('portfolio__image_bordered');
+    }
+  }
+});
 
 
 

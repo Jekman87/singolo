@@ -431,7 +431,6 @@ h3 {
 
 .portfolio__projects {
   max-height: 610px;
-  overflow: hidden;
 }
 
 .portfolio__image {
@@ -450,12 +449,20 @@ h3 {
   margin-right: 20px;
 }
 
+.portfolio__image:nth-child(n + 13) {
+  display: none;
+}
+
 .portfolio__image img {
   transition: all 0.5s ease-out;
 }
 
 .portfolio__image img:hover {
   transform: scale(1.2);
+}
+
+.portfolio__image_bordered {
+  outline: 5px solid #f06c64;
 }
 
 /* about-us ***************************************************/
