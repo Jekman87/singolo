@@ -257,5 +257,6 @@ function closeModal(event) {
   if (event.target === MODAL_BUTTON || event.target === MODAL) {
     MODAL.classList.remove('modal__overlay_show');
     MODAL_TEXT.innerHTML = '';
+    FORM.reset();
   }
 }
