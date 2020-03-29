@@ -2,7 +2,8 @@ window.onload = function() {
 
   // menu click
   const menu = document.getElementById('menu');
-  const headerOffsetHeight = document.querySelector('header').offsetHeight;
+  const header = document.querySelector('.header');
+  const headerOffsetHeight = header.offsetHeight;
 
   menu.addEventListener('click', event => {
     if (event.target.tagName === 'A') {
@@ -12,6 +13,8 @@ window.onload = function() {
 
       const sectionId = event.target.getAttribute('href');
       const sectionOffsetTop = document.querySelector(sectionId).offsetTop;
+
+      header.classList.remove('menu_open');
 
       window.scrollTo({
         top: sectionOffsetTop - headerOffsetHeight,
@@ -53,6 +56,19 @@ window.onload = function() {
       }
     });
   });
+
+  // mobile menu
+  const burger = document.querySelector('.header__burger');
+  const overlay = document.querySelector('.menu__overlay');
+
+  burger.addEventListener('click', event => {
+    header.classList.toggle('menu_open');
+  });
+
+  overlay.addEventListener('click', event => {
+    header.classList.toggle('menu_open');
+  });
+
 
   // slider for desktop
   const sliderSection = document.getElementById('slider');

@@ -794,8 +794,8 @@ textarea.fieldset__input {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: rgba(80, 80, 80, 0.6);
 }
@@ -1061,6 +1061,43 @@ textarea.fieldset__input {
 
 @media (max-width: 767px) {
   .header__navigation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+
+    display: flex;
+    width: 74vw;
+    height: 100vh;
+
+    background-color: #2d303a;
+    box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
+
+    transition: all 0.3s;
+  }
+
+  .menu_open .header__navigation {
+    left: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 232px;
+    left: 44px;
+
+    display: block;
+
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+
+  .navigation__link {
+    margin-bottom: 48px;
+
+    letter-spacing: -1px;
+  }
+
+  .navigation__link:not(:first-child)::before {
     display: none;
   }
 
@@ -1071,12 +1108,47 @@ textarea.fieldset__input {
 
   .header__burger {
     display: flex;
+
+    transition: all 0.3s;
+  }
+
+  .menu_open .header__burger {
+    transform: rotate(90deg);
   }
 
   .logo {
+    z-index: 5;
+
     font-size: 2rem;
     line-height: 2.4rem;
     letter-spacing: -0.7px;
+
+    transition: all 0.3s;
+  }
+
+  .menu_open .logo {
+    margin-right: 40vw;
+  }
+
+  .menu__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    background: #2d303a;
+    opacity: 0.6;
+
+    transition: all 0.3s;
+  }
+
+  .menu_open .menu__overlay {
+    display: block;
   }
 
   .slider__button {
