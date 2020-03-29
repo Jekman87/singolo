@@ -157,7 +157,6 @@ h3 {
 .slider__wrapper {
   position: relative;
 
-  padding: 20px 80px;
   overflow: hidden;
 }
 
@@ -213,13 +212,13 @@ h3 {
 }
 
 .phone-vertical {
-  top: 33px;
-  left: 32px;
+  top: 54px;
+  left: 112px;
 }
 
 .phone-horizontal {
-  top: 154px;
-  left: 345px;
+  top: 177px;
+  right: 111px;
 }
 
 
@@ -273,8 +272,8 @@ h3 {
 }
 
 .phone-group {
-  top: 23px;
-  left: 172px;
+  top: 49px;
+  left: 252px;
 }
 
 .to-left {
@@ -343,10 +342,10 @@ h3 {
 .service {
   position: relative;
 
-  width: 300px;
+  flex: 1 0 31%;
   max-height: 112px;
   margin-bottom: 12px;
-  padding: 20px 0 0 80px;
+  padding: 23px 0 0 80px;
   overflow: hidden;
 }
 
@@ -436,9 +435,9 @@ h3 {
 
 .portfolio__image {
   display: flex;
+  flex: 1 0 23%;
   justify-content: center;
   align-items: center;
-  width: 220px;
   height: 187px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -455,6 +454,8 @@ h3 {
 }
 
 .portfolio__image img {
+  width: 100%;
+
   transition: all 0.5s ease-out;
 }
 
@@ -498,11 +499,15 @@ h3 {
 }
 
 .employee {
-  width: 300px;
+  flex: 1 0 31%;
 }
 
 .employee__content {
   margin-top: 14px;
+}
+
+.employee img {
+  width: 100%;
 }
 
 .employee__title {
@@ -804,10 +809,220 @@ textarea.fieldset__input {
   padding: 9px 2px;
 
   font-weight: 700;
+  font-size: 1.3rem;
   color: #575d74;
-  letter-spacing: -0.3px;
 }
 
 .employee__social:last-child {
   margin-right: 0;
+}
+
+/* media query ***************************************************/
+
+@media (max-width: 1019px) {
+  .slider {
+    height: 58.7vw;
+  }
+
+  .slider__content {
+    height: 58.7vw;
+  }
+
+  .slider__button {
+    top: 27.66vw;
+  }
+
+  .slider__button_left {
+    left: 4vw;
+  }
+
+  .slider__button_right {
+    right: 3.5vw;
+  }
+
+  .phone-button {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+
+  .phone-vertical {
+    top: 5.3vw;
+    left: 10.9vw;
+  }
+
+  .phone-vertical img {
+    width: 23.6vw;
+  }
+
+  .phone-vertical__dark-screen {
+    top: 6.4vw;
+    left: 1.3vw;
+
+    width: 18.6vw;
+    height: 32.7vw;
+  }
+
+  .phone-vertical__button {
+    bottom: 3.4vw;
+    left: 8.3vw;
+  }
+
+  .phone-horizontal {
+    top: 17.3vw;
+    left: 41.6vw;
+  }
+
+  .phone-horizontal img {
+    width: 47.5vw;
+  }
+
+  .phone-horizontal__dark-screen {
+    top: 1.3vw;
+    left: 5.9vw;
+
+    width: 32.8vw;
+    height: 18.6vw;
+  }
+
+  .phone-horizontal__button {
+    bottom: 11vw;
+    left: 0.7vw;
+  }
+
+  .phone-group {
+    top: 4.8vw;
+    left: 24.7vw;
+  }
+
+  .phone-group img {
+    width: 50.7vw;
+  }
+
+  .our-services__wrapper {
+    padding: 48px 40px 32px;
+  }
+
+  .service {
+    flex-basis: 48%;
+    margin-bottom: 38px;
+    padding-top: 13px;
+  }
+
+  .service:not(:nth-child(3n+3)) {
+    margin-right: 0;
+  }
+
+  .service:not(:nth-child(2n)) {
+    margin-right: 20px;
+  }
+
+  .service img {
+    top: 14px;
+  }
+
+  .portfolio__wrapper {
+    padding-bottom: 47px;
+  }
+
+  .portfolio__title {
+    margin-bottom: 26px;
+  }
+
+  .portfolio__description {
+    margin-bottom: 12px;
+    padding-right: 40px;
+
+    line-height: 3rem;
+  }
+
+  .portfolio__tags {
+    margin-bottom: 28px;
+  }
+
+  .portfolio__image {
+    flex-basis: 31%;
+    height: 23.9vw;
+  }
+
+  .portfolio__projects {
+    max-height: none;
+  }
+
+  .portfolio__image img {
+    width: 100%;
+  }
+
+  .portfolio__image:not(:nth-child(4n+4)) {
+    margin-right: 0;
+  }
+
+  .portfolio__image:not(:nth-child(3n+3)) {
+    margin-right: 20px;
+  }
+
+  .about-us__wrapper {
+    padding: 61px 41px 67px;
+  }
+
+  .about-us__description {
+    margin-bottom: 37px;
+  }
+
+  .about-us__employee:not(:nth-child(3n+3)) {
+    margin-right: 15px;
+  }
+
+  .employee__content {
+    margin-top: 10px;
+  }
+
+  .employee__title {
+    margin-bottom: 4px;
+  }
+
+  .employee__description {
+    margin-bottom: 12px;
+  }
+
+  .get-a-quote__wrapper {
+    padding: 61px 40px 39px;
+  }
+
+  .get-a-quote__description {
+    margin-bottom: 26px;
+  }
+
+  .get-a-quote__form {
+    width: 57.6vw;
+  }
+
+  .fieldset__input {
+    margin-bottom: 12px;
+    padding: 7px 8px 9px;
+
+    line-height: 1.3rem;
+  }
+
+  textarea.fieldset__input {
+    height: 20.7vw;
+    margin-bottom: 14px;
+  }
+
+  .get-a-quote__sidebar {
+    width: 28.4vw;
+  }
+  .sidebar-contact__title {
+    margin-bottom: 2px;
+  }
+
+  .sidebar-contact__description {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 374px) {
 }
