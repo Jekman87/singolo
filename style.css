@@ -578,7 +578,7 @@ h3 {
 }
 
 .get-a-quote__wrapper {
-  padding: 67px 40px 12px;
+  padding: 67px 40px 58px;
 }
 
 .get-a-quote__title {
@@ -652,6 +652,10 @@ input:-webkit-autofill {
   animation-fill-mode: both;
 }
 
+.fieldset__input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
 textarea.fieldset__input {
   height: 202px;
 
@@ -659,12 +663,17 @@ textarea.fieldset__input {
 }
 
 .button-submit {
-  padding: 12px 30px;
+  width: 136px;
+  height: 38px;
 
-  color: #f0d8d9;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #886a30;
   text-transform: uppercase;
 
-  background: #767e9e;
+  background: #fbc65f;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -673,7 +682,7 @@ textarea.fieldset__input {
 }
 
 .button-submit:hover {
-  background: #a7a1a1;
+  background: #d79e2f;
 }
 
 .get-a-quote__sidebar {
